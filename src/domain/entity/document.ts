@@ -2,19 +2,27 @@ import { DocumentType } from "../types";
 import { MeasureType } from "../utils/measure-type";
 
 export class Document {
-	constructor(
+	private constructor(
 		public readonly image: string,
-		public readonly customer_code: string,
-		public readonly measure_datetime: Date,
-		public readonly measure_type: MeasureType,
+		public readonly customerCode: string,
+		public readonly measureDatetime: number,
+		public readonly measureType: MeasureType,
+		public readonly hasConfirmed?: boolean,
+		public readonly measureUuid?: string,
+		public readonly imageUrl?: string,
+		public readonly measureValue?: number,
 	) {}
 
 	public static create(document: DocumentType) {
 		return new Document(
 			document.image,
-			document.customer_code,
-			document.measure_datetime,
-			document.measure_type,
+			document.customerCode,
+			document.measureDatetime,
+			document.measureType,
+			document.hasConfirmed,
+			document.measureUuid,
+			document.imageUrl,
+			document.measureValue,
 		);
 	}
 }
