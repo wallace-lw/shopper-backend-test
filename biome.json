@@ -15,7 +15,10 @@
 			"style": {
 				"noShoutyConstants": "warn",
 				"useNamingConvention": "off",
-				"useImportType": "off"
+				"useImportType": "off",
+				"noNonNullAssertion": "off",
+				"noInferrableTypes":"off"
+				
 			}
 		}
 	},
