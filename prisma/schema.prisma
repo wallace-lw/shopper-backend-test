@@ -9,14 +9,16 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model Document {
   measure_uuid     String   @id @default(uuid())
-  image_url        String
-  measure_value    Int
+  customer_code    String
+  image_url        String?
+  measure_type     String
+  measure_value    Int?
   measure_datetime DateTime @default(now())
   has_confirmed    Boolean
 }
