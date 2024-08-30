@@ -7,7 +7,7 @@ import path from "node:path";
 
 export class ExtractImageValueUseCase {
 	async execute(document: Document): Promise<Document> {
-		const genAI = new GoogleGenerativeAI(process.env.API_KEY as string);
+		const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
 		const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 		const base64Data = document.image.replace(/^data:image\/\w+;base64,/, "");
