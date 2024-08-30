@@ -1,26 +1,32 @@
 import { SqliteDocumentRepository } from "@/application/repository";
-import { VerifyDocumentDate } from "@/domain/service";
-import { SaveDocumentController } from "@/interface/controller/save-document-controller";
-import { DocumentDTO } from "@/interface/dto/document-dto";
+import { UpdateDocumentValueUseCase } from "@/domain/usecases/update-document-value-usecase";
+import { UpdateDocumentValueController } from "@/interface/controller/update-document-value-controller";
+import { AppError } from "@/interface/helpers/errors";
 import { Router } from "express";
-import { AppRouter } from "./app-router";
 
-export function createRoute(): AppRouter {
-	const router = Router();
+export const confirmRoute = Router();
 
-	const repository = new SqliteDocumentRepository();
-	const service = new VerifyDocumentDate(repository);
-	const saveDocumentController = new SaveDocumentController(service);
+const repository = new SqliteDocumentRepository();
+const usecase = new UpdateDocumentValueUseCase(repository);
+const updateDocumentValueController = new UpdateDocumentValueController(
+	usecase,
+);
 
-	router.post("/", async (request, response) => {
-		const dto = request.body as DocumentDTO;
-		const result = await saveDocumentController.execute(dto);
-
+confirmRoute.patch("/", async (request, response) => {
+	try {
+		const dto = request.body;
+		const result = await updateDocumentValueController.execute({
+			confirmedValue: dto.confirmed_value,
+			measureUuid: dto.measure_uuid,
+		});
 		return response.json(result);
-	});
-
-	return {
-		path: "/confirm",
-		router,
-	};
-}
+	} catch (err) {
+		if (err instanceof AppError) {
+			return response.status(err.statusCode).json({ error: err.message });
+		}
+		return response.status(500).json({
+			status: "Error",
+			message: `Internal server error: ${err}`,
+		});
+	}
+});
