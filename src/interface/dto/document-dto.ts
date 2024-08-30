@@ -1,6 +1,16 @@
-export type DocumentDTO = {
+export type DocumentInputDTO = {
 	image: string;
-	customer_code: string;
-	measure_datetime: Date;
-	measure_type: string;
+	customerCode: string;
+	measureDatetime: number;
+	measureType: string;
+	hasConfirmed?: boolean;
+	measureUuid?: string;
+	imageUrl?: string;
+	measureValue?: number;
+};
+
+export type DocumentOutputDTO = {
+	measure_value: number;
+	measure_uuid: string;
+	image_url: string;
 };
