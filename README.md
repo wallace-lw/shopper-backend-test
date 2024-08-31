@@ -1,3 +1,19 @@
+
+
+### Shopper Backend - Teste
+Este projeto é uma aplicação desenvolvida com Node.js, utilizando TypeScript, Express, Prisma e a API Generative AI do Gemini. A aplicação tem como objetivo de extrair valores de medidores e retornar suas medidas. Com a integração da API Generative AI, o projeto explora recursos avançados de inteligência artificial para extrair valores de imagens.
+
+#### Pré-requisitos
+- Node.js 18: Certifique-se de ter o Node.js versão 18 instalada em sua máquina antes de prosseguir com a instalação e execução do projeto.
+
+Para executar o projeto rode: 
+
+```
+    $ npm install
+    $ docker compose up --build
+```
+
+-----
 ### **DOCUMENTAÇÃO**
 
 https://ai.google.dev/gemini-api/docs/api-key
@@ -37,6 +53,6 @@ Validar:
 - [X]  Retornar uma lista com todas leituras realizadas daquele cliente
 
 -----
-- [ ]  Dockerizar a aplicação
+- [X]  Dockerizar a aplicação
 - [X]  Fazer tratamento de erros das rotas
-- [ ]  Fazer teste unitários
+- [ ]  Fazer teste unitários❌
