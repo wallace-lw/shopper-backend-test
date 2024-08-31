@@ -1,11 +1,11 @@
 {
   "name": "shopper-backend-test",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch --env-file=.env ./src/framework/server",
-    "start": "node --env-file=.env ./dist/framework/server",
+    "start": "npm run migrate && node ./src/framework/server",
+    "start2": "node --env-file=.env ./dist/framework/server",
     "build": "tsc --build",
     "migrate": "prisma migrate deploy"
   },
@@ -14,7 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@prisma/client": "^5.19.0",
     "@types/body-parser": "^1.19.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
@@ -30,14 +29,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",
-    "module-alias": "^2.2.3",
+    "@prisma/client": "^5.19.0",
     "multer": "^1.4.5-lts.1",
     "prisma": "^5.19.0"
-  },
-  "_moduleAliases": {
-    "@": "src"
-  },
-  "prisma": {
-    "schema": "./prisma/schema.prisma"
   }
 }
