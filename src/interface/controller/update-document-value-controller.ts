@@ -1,4 +1,4 @@
-import { UpdateInputDTO } from "@/domain/usecases/update-document-value-usecase";
+import { UpdateInputDTO } from "../../domain/usecases/update-document-value-usecase";
 import { UpdateDocumentValueUseCase } from "../../domain/usecases/update-document-value-usecase";
 
 type UpdateOutputDTO = {

@@ -1,8 +1,8 @@
 import {
 	ListAllDocumentsUseCase,
 	ListAllInputDTO,
-} from "@/domain/usecases/get-all-documents-measures-usecases";
-import { MeasureType } from "@/domain/utils";
+} from "../../domain/usecases/get-all-documents-measures-usecases";
+import { MeasureType } from "../../domain/utils";
 import { AppError } from "../helpers/errors";
 import { Errors } from "../shared/Errors";
 

@@ -1,7 +1,7 @@
-import { Document } from "@/domain/entity";
-import { DocumentRepository } from "@/domain/repository";
-import { MeasureType } from "@/domain/utils";
-import { prisma } from "@/framework/prisma";
+import { Document } from "../../domain/entity/document";
+import { DocumentRepository } from "../../domain/repository";
+import { MeasureType } from "../../domain/utils";
+import { prisma } from "../../framework/prisma";
 
 export class SqliteDocumentRepository implements DocumentRepository {
 	// biome-ignore lint/suspicious/noExplicitAny: <explanation>

@@ -1,1 +1,1 @@
-export * from "./measure-type";
+export * from "../../domain/utils/measure-type";

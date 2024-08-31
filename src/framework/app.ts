@@ -1,8 +1,8 @@
-import { errorHandler } from "@/interface/helpers/errors";
+import { routes } from "./route";
+import { errorHandler } from "../interface/helpers/errors";
 import express from "express";
 import fs from "node:fs";
 import path from "node:path";
-import { routes } from "./route";
 
 class App {
 	public server;

@@ -1,1 +1,1 @@
-export * from "./extract-image-value-usecase";
+export * from "../../application/usecases/extract-image-value-usecase";

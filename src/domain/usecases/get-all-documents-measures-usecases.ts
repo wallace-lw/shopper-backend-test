@@ -1,5 +1,5 @@
-import { AppError } from "@/interface/helpers/errors";
-import { Errors } from "@/interface/shared/Errors";
+import { AppError } from "../../interface/helpers/errors";
+import { Errors } from "../../interface/shared/Errors";
 import { DocumentRepository } from "../repository";
 import { MeasureType } from "../utils";
 

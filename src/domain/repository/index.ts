@@ -1,1 +1,1 @@
-export * from "./document-repository";
+export * from "../../domain/repository/document-repository";

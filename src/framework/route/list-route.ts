@@ -1,8 +1,8 @@
-import { SqliteDocumentRepository } from "@/application/repository";
-import { ListAllDocumentsUseCase } from "@/domain/usecases/get-all-documents-measures-usecases";
-import { MeasureType } from "@/domain/utils";
-import { ListAllDocumentsController } from "@/interface/controller/get-all-documents-measures-controller";
-import { AppError } from "@/interface/helpers/errors";
+import { SqliteDocumentRepository } from "../../application/repository";
+import { ListAllDocumentsUseCase } from "../../domain/usecases/get-all-documents-measures-usecases";
+import { MeasureType } from "../../domain/utils";
+import { ListAllDocumentsController } from "../../interface/controller/get-all-documents-measures-controller";
+import { AppError } from "../../interface/helpers/errors";
 import { Router } from "express";
 
 export const listDocumentsRoute = Router();

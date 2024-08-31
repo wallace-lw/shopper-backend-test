@@ -1,8 +1,8 @@
-import { SqliteDocumentRepository } from "@/application/repository";
-import { ExtractImageValueUseCase } from "@/application/usecases";
-import { SaveDocumentUseCase } from "@/domain/usecases";
-import { SaveDocumentController } from "@/interface/controller/save-document-controller";
-import { AppError } from "@/interface/helpers/errors";
+import { SqliteDocumentRepository } from "../../application/repository";
+import { ExtractImageValueUseCase } from "../../application/usecases";
+import { SaveDocumentUseCase } from "../../domain/usecases";
+import { SaveDocumentController } from "../../interface/controller/save-document-controller";
+import { AppError } from "../../interface/helpers/errors";
 import { Router } from "express";
 
 export const uploadRoute = Router();

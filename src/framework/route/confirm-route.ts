@@ -1,7 +1,7 @@
-import { SqliteDocumentRepository } from "@/application/repository";
-import { UpdateDocumentValueUseCase } from "@/domain/usecases/update-document-value-usecase";
-import { UpdateDocumentValueController } from "@/interface/controller/update-document-value-controller";
-import { AppError } from "@/interface/helpers/errors";
+import { SqliteDocumentRepository } from "../../application/repository";
+import { UpdateDocumentValueUseCase } from "../../domain/usecases/update-document-value-usecase";
+import { UpdateDocumentValueController } from "../../interface/controller/update-document-value-controller";
+import { AppError } from "../../interface/helpers/errors";
 import { Router } from "express";
 
 export const confirmRoute = Router();

@@ -1,4 +1,4 @@
-import { DocumentInputDTO } from "@/interface/dto/document-dto";
+import { DocumentInputDTO } from "../../interface/dto/document-dto";
 import { Document } from "../entity/document";
 import { DocumentRepository } from "../repository/document-repository";
 import { MeasureType } from "../utils";

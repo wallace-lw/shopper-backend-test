@@ -1,4 +1,4 @@
-import { SaveDocumentUseCase } from "@/domain/usecases/save-document-usecase";
+import { SaveDocumentUseCase } from "../../domain/usecases/save-document-usecase";
 import { DocumentInputDTO, DocumentOutputDTO } from "../dto/document-dto";
 
 export class SaveDocumentController {

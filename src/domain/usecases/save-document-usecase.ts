@@ -1,7 +1,7 @@
-import { ExtractImageValueUseCase } from "@/application/usecases";
-import { DocumentInputDTO } from "@/interface/dto/document-dto";
-import { AppError } from "@/interface/helpers/errors";
-import { Errors } from "@/interface/shared/Errors";
+import { ExtractImageValueUseCase } from "../../application/usecases";
+import { DocumentInputDTO } from "../../interface/dto/document-dto";
+import { AppError } from "../../interface/helpers/errors";
+import { Errors } from "../../interface/shared/Errors";
 import { Document } from "../entity/document";
 import { DocumentRepository } from "../repository/document-repository";
 import { MeasureType } from "../utils";

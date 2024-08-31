@@ -1,6 +1,6 @@
-import { Document } from "@/domain/entity";
-import { AppError } from "@/interface/helpers/errors";
-import { Errors } from "@/interface/shared/Errors";
+import { Document } from "../../domain/entity";
+import { AppError } from "../../interface/helpers/errors";
+import { Errors } from "../../interface/shared/Errors";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "node:fs";
 import path from "node:path";
@@ -30,7 +30,7 @@ export class ExtractImageValueUseCase {
 		}
 
 		const prompt =
-			"Give me the total water consumption charged for this image and return this value in a number.";
+			"Give me the total consumption charged for this image and return this value in a number";
 
 		const decodedImage = {
 			inlineData: {

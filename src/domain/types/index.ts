@@ -1,1 +1,1 @@
-export * from "./document";
+export * from "../../domain/types/document";
